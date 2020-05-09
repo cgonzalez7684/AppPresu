@@ -1,0 +1,38 @@
+
+  .dataTables_filter {
+    margin-top: 15px;
+    margin-right: 10px; 
+  }
+
+thead, th {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+
+.card{
+  border: 1px solid slategrey;
+}
+.card-header, .btnCtrl{
+    background-color: #191970;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+.btnCtrl{  
+  width: 90%; 
+  border-radius: 10px;    
+  
+}
+
+.btnCtrl:hover{
+  background-color: #383886;
+}
+
+
+ 
+
