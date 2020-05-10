@@ -4,9 +4,12 @@
     margin-right: 10px; 
   }
 
+
+
+
 thead, th {
-    text-align: center;
-    background-color: black;
+    
+    background-color: rgb(53, 38, 104);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -16,6 +19,7 @@ thead, th {
 .card{
   border: 1px solid slategrey;
 }
+
 .card-header, .btnCtrl{
     background-color: #191970;
     color: white;

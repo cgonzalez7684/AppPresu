@@ -65,7 +65,7 @@
             <div class="row">    
                    
               <div class="col-sm-4">
-                <button class="btnCtrl" id="btnNuevos"><i class="fas fa-user"></i> Nuevo</button>                                 
+                <button class="btnCtrl" id="btnNuevo"><i class="fas fa-user"></i> Nuevo</button>                                 
               </div>
               <div class="col-sm-4">
                 <button class="btnCtrl" id="btnModificar"><i class="fas fa-user-edit"></i>  Modificar</button>
@@ -78,13 +78,9 @@
         </div>
         <div class="col-md-7">
         <div class="table-responsive">
-            <table id="dataTable" class="table table-bordered table-hover table-sm compact">
+            <table id="dataTable" class="table table-fit table-bordered table-hover tabla-sm">
             
-                <thead>
-                  
-                </thead>                      
-                <tbody>                                      
-                </tbody>
+               
             </table>
 
         </div>

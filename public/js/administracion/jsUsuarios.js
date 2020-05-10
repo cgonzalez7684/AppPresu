@@ -15,6 +15,13 @@ function setUsuario(){
 }
 
 
+function deleteUsuario(){
+    setUsuario()
+    requestServidor('deleteUsuario','POST','A',Usuario,$("#frmUsuarios"))
+    getUsuarios() 
+}
+
+
 function updateUsuario(){
     setUsuario()
     requestServidor('updateUsuario','POST','A',Usuario,$("#frmUsuarios"))
@@ -125,6 +132,12 @@ function cargaTabla(pDatos){
         data : arrDatos,
         scrollY: '35vh',
         scrollCollapse: false,
+        columnDefs: [
+            // Center align the header content of column 1
+           { className: "dt-head-center", targets: [ 0 ] },
+           // Center align the body content of columns 2, 3, & 4
+           { className: "dt-body-center", targets: [ 1, 2, 3 ] }
+        ],
         columns: [
             {name:"nIdUsuario",data:"nIdUsuario", searchable : false, visible : false},
             {title: "Usuario",name:"sUsuario",data:"sUsuario",width: "20%", searchable : true, visible : true},
@@ -161,9 +174,18 @@ $(document).ready(function(e){
 
     $("#btnNuevo").click(function(e){
         e.preventDefault()
-        registerUsuario()        
-        //getUsuarios()
+        registerUsuario()               
        
+    })
+
+    $('#btnModificar').click(function(e){
+        e.preventDefault()
+        updateUsuario()
+    })
+
+    $('#btnEliminar').click(function(e){
+        e.preventDefault()
+        deleteUsuario()
     })
 
     $("#txtsUsuario").focus();

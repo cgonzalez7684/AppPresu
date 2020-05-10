@@ -25,6 +25,8 @@ Route::post('/registerUsuario','UsuarioController@registerUsuario');
 
 Route::post('/updateUsuario','UsuarioController@updateUsuario');
 
+Route::post('/deleteUsuario','UsuarioController@deleteUsuario');
+
 
 
 Route::post('/mostrar','UsuarioController@mostrar');

@@ -97,4 +97,35 @@ class UsuarioController extends Controller
             return json_encode($response);
         }
     }
+
+    public function deleteUsuario(Request $request){
+
+        $response = ['Resultado'=>'Exitoso',
+        'Texto'=>'Usuario eliminado con exito',
+        'Data'=>Null];
+
+        try {
+            $objUsrRequest = $request->input();
+            $usuario = Usuario::where('sUsuario', $objUsrRequest['sUsuario'])->first();
+
+            if ($usuario == null){
+                $response['Resultado'] = 'Fallido' ;
+                $response['Texto'] = 'Usuario por eliminar no se encuentra';
+                return json_encode($response);
+            }
+
+            $usuario->delete();
+            return json_encode($response);
+            
+
+
+        } catch (\Throwable $th) {
+            $response['Resultado'] = 'Fallido';
+            $response['Texto'] = 'Error ['.$request->path().']: '.' '.$th->errorInfo[2];
+            $response['Data'] =  $th ;
+            return json_encode($response);
+        }
+    }
+
+
 }
